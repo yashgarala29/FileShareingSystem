@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileShareingSystem", "FileShareingSystem\FileShareingSystem.csproj", "{23C734A1-B0C5-49F6-9DF5-324A1AAD6884}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileShareingSystemHost", "FileShareingSystemHost\FileShareingSystemHost.csproj", "{1E200591-998F-4910-B8DA-8B599433E342}"
+	ProjectSection(ProjectDependencies) = postProject
+		{23C734A1-B0C5-49F6-9DF5-324A1AAD6884} = {23C734A1-B0C5-49F6-9DF5-324A1AAD6884}
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{23C734A1-B0C5-49F6-9DF5-324A1AAD6884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23C734A1-B0C5-49F6-9DF5-324A1AAD6884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23C734A1-B0C5-49F6-9DF5-324A1AAD6884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23C734A1-B0C5-49F6-9DF5-324A1AAD6884}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E200591-998F-4910-B8DA-8B599433E342}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E200591-998F-4910-B8DA-8B599433E342}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E200591-998F-4910-B8DA-8B599433E342}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E200591-998F-4910-B8DA-8B599433E342}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {514FC6EE-B08B-46D7-A94E-FDCAA0F23DE5}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="FileUploade" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/FileShareingSystem" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/FileShareingSystem.Class" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IFileUploade_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IFileUploade_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileUploade_SaveFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveFile" />
+  </wsdl:message>
+  <wsdl:message name="IFileUploade_SaveFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileUploade_GetFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFile" />
+  </wsdl:message>
+  <wsdl:message name="IFileUploade_GetFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileUploade_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="IFileUploade_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IFileUploade_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IFileUploade_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IFileUploade">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileUploade/DoWork" message="tns:IFileUploade_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileUploade/DoWorkResponse" message="tns:IFileUploade_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileUploade/SaveFile" message="tns:IFileUploade_SaveFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileUploade/SaveFileResponse" message="tns:IFileUploade_SaveFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileUploade/GetFile" message="tns:IFileUploade_GetFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileUploade/GetFileResponse" message="tns:IFileUploade_GetFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileUploade/Register" message="tns:IFileUploade_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileUploade/RegisterResponse" message="tns:IFileUploade_Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IFileUploade/Login" message="tns:IFileUploade_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IFileUploade/LoginResponse" message="tns:IFileUploade_Login_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IFileUploade" type="tns:IFileUploade">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap:operation soapAction="http://tempuri.org/IFileUploade/DoWork" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveFile">
+      <soap:operation soapAction="http://tempuri.org/IFileUploade/SaveFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFile">
+      <soap:operation soapAction="http://tempuri.org/IFileUploade/GetFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://tempuri.org/IFileUploade/Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IFileUploade/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="FileUploade">
+    <wsdl:port name="BasicHttpBinding_IFileUploade" binding="tns:BasicHttpBinding_IFileUploade">
+      <soap:address location="http://localhost:8733/Design_Time_Addresses/FileShareingSystem/FileUploade/" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
